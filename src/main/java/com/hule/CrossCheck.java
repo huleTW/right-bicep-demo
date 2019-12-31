@@ -17,4 +17,10 @@ public class CrossCheck {
         }
         return source;
     }
+
+    public List<String> add(List<String> source, String test) {
+        ArrayList<String> results = new ArrayList<>(source);
+        results.add(test);
+        return results;
+    }
 }

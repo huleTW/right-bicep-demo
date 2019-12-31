@@ -16,4 +16,12 @@ public class CrossCheckTest {
         List<String> sort = new CrossCheck().sort(source);
         assertEquals(String.join("", sort), Stream.of("2", "a", "f", "b", "1").sorted().collect(Collectors.joining()));
     }
+
+    @Test
+    public void should_test_add() {
+        List<String> source = Arrays.asList("2", "a", "f", "b", "1");
+        List<String> results = new CrossCheck().add(source, "test");
+        assertEquals(source.size() + 1, results.size());
+        assertEquals(results.get(results.size() - 1), "test");
+    }
 }
