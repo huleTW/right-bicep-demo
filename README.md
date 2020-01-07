@@ -1,8 +1,11 @@
 ## Graph
 ### 可视化类之间的关系
 *input* [[1,2,3], [3,5,6],[3,4,6,20],[2,3,4,5,6,7,8,10,55],[3,4,68,9,10,42,53,57],[4,29,49,10,9,19,0,30]]
+
 *output* links,nodes
-将output转成json后，上传到https://observablehq.com/@huletw/force-directed-graph,靠的越近的类，一起出现的概率越高，可以进行聚类
+
+将output转成json后，上传到https://observablehq.com/@huletw/force-directed-graph
+靠的越近的类，一起出现的概率越高，可以进行聚类
 
 ## 测试各种原则demo
 
