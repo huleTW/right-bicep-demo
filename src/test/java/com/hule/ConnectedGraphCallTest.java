@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class ConnectedGraphCallTest {
@@ -21,7 +22,11 @@ public class ConnectedGraphCallTest {
         map.put("D", Arrays.asList("E", "B"));
         map.put("E", Arrays.asList("B", "D"));
         List<String> total = new ConnectedGraphCall(map).getGraphCallPath();
-        assertEquals(total.size(), 20);
+        assertEquals(total.size(), 9);
+        assertTrue(total.contains("A->B->D;A->D"));
+        assertTrue(total.contains("A->C->D;A->D"));
+        assertTrue(total.contains("A->D->B;A->B"));
+        assertTrue(total.contains("A->D->E->B;A->B"));
     }
 
 }
